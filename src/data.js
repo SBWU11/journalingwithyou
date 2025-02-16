@@ -2,15 +2,15 @@ export const dateMemories = [
     {
         id: 1,
         date: '2025-01-10',
-        title: 'Rooftop Bar & The First Time Seeing You',
-        description: 'Dear Beth',
+        title: "Our First Date!",
+        description: "Dear Beth ",
         images: [],
         videos: []
     },
     {
         id: 3,
         date: '2025-02-15',
-        title: 'BIRTHDAY',
+        title: "Happy Birthday To Ya!",
         description: "Today is Beth's birthday ",
         images: [],
         videos: []
