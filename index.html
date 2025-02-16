@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal</title>
+    <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+    <!-- Main notebook container -->
+    <div class="notebook">
+        <!-- Sidebar with title and date list -->
+        <div class="sidebar">
+            <!-- Main title -->
+            <div class="sidebar-header">
+                <h2>JOURNAL</h2>
+            </div>
+            
+            <!-- Sort button for date entries -->
+            <div class="sort-button-container">
+                <button id="sort-toggle" class="sort-toggle" aria-label="Toggle sort order">
+                    <img src="/toggle_date.svg" alt="Sort toggle icon" />
+                </button>
+            </div>
+
+            <!-- List of date entries -->
+            <div id="date-list"></div>
+        </div>
+
+        <!-- Main content area -->
+        <div class="content-area">
+            <!-- Content will be dynamically inserted here -->
+            <div class="date-memory">
+                <h3></h3>
+                <h4></h4>
+                <p></p>
+                <div class="media-gallery"></div>
+            </div>
+            <!-- Empty state -->
+            <div id="date-content" class="empty-state">
+                Select a date to view memories
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript imports -->
+    <script type="module" src="/src/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# System files
+.DS_Store
+
+# Media files (you'll want to track these in git-lfs or host them elsewhere)
+/images/*
+/videos/*
+!images/.gitkeep
+!videos/.gitkeep
