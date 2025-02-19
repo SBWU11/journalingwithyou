@@ -20,8 +20,8 @@ export const dateMemories = [
         date: '2025-01-24',
         title: 'Pottery Night!',
         description: 'Pottery Night, Ding Tai Fung ',
-        images: ['./images/IMG_7551.jpeg'],
-        videos: ['./videos/cuteone2.mov']
+        images: ['/journalingwithyou/images/IMG_7551.jpeg'],  // Update path to include base
+        videos: ['/journalingwithyou/videos/cuteone2.mov']    // Update path to include base
     }
-    // You can add more date entries here in the same format
+    
 ];

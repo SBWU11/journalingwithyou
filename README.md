@@ -1,4 +1,4 @@
-# Date Memory Book 📖❤️
+# Date Memory Book 
 
 A beautiful, static web application to display your dating memories in a notebook-style interface. Perfect for hosting on GitHub Pages!
 

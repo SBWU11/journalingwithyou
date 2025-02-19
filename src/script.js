@@ -1,4 +1,6 @@
+import './styles.css';
 import { dateMemories } from './data.js';
+// rest of your code...
 
 console.log('Script loaded, dateMemories:', dateMemories);
 
