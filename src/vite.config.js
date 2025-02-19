@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/windsurf-project/', // Replace with your repository name
+  base: '/journalingwithyou/', // Updated to match your repository name
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
