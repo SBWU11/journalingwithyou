@@ -1,8 +1,35 @@
+# Dependency directories
+node_modules
+.pnpm-store
+
+# Build output
+dist
+dist-ssr
+
+# Cache and logs
+*.log
+.cache
+.temp
+
 # System files
 .DS_Store
+
+# Environment variables
+.env
+.env.*
 
 # Media files (you'll want to track these in git-lfs or host them elsewhere)
 /images/*
 /videos/*
 !images/.gitkeep
 !videos/.gitkeep
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
