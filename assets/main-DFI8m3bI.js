@@ -1,0 +1,13 @@
+(function(){const n=document.createElement("link").relList;if(n&&n.supports&&n.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))s(t);new MutationObserver(t=>{for(const o of t)if(o.type==="childList")for(const r of o.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&s(r)}).observe(document,{childList:!0,subtree:!0});function i(t){const o={};return t.integrity&&(o.integrity=t.integrity),t.referrerPolicy&&(o.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?o.credentials="include":t.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function s(t){if(t.ep)return;t.ep=!0;const o=i(t);fetch(t.href,o)}})();const c=[{id:1,date:"2025-01-10",title:"Our First Date!",description:"Dear Beth ",images:[],videos:[]},{id:3,date:"2025-02-15",title:"Happy Birthday To Ya!",description:"Today is Beth's birthday ",images:[],videos:[]},{id:2,date:"2025-01-24",title:"Pottery Night!",description:"Pottery Night, Ding Tai Fung ",images:["/journalingwithyou/images/IMG_7551.jpeg"],videos:["/journalingwithyou/videos/cuteone2.mov"]}];console.log("Script loaded, dateMemories:",c);const d=document.getElementById("date-list"),g=document.getElementById("date-content");let a=!0;function l(){console.log("Loading date list..."),d.innerHTML="";const e=[...c].sort((n,i)=>{const s=new Date(n.date),t=new Date(i.date);return a?s-t:t-s});console.log("Sorted dates:",e),e.forEach(n=>{const i=p(n);d.appendChild(i)}),e.length>0&&u(e[0])}function p(e){const n=document.createElement("button"),s=new Date(e.date).toLocaleDateString("en-GB",{day:"2-digit",month:"2-digit",year:"numeric"});return n.innerHTML=`<span class="date-part">${s}</span><span class="title-part">${e.title}</span>`,n.addEventListener("click",()=>u(e)),n}function u(e){console.log("Displaying memory:",e);const n=new Date(e.date).toLocaleDateString("en-US",{weekday:"long",year:"numeric",month:"long",day:"numeric"});g.innerHTML=`
+        <div class="date-memory">
+            <h3>${e.title}</h3>
+            <h4>${n}</h4>
+            <p>${e.description}</p>
+            ${e.images.length>0||e.videos.length>0?`
+                <div class="media-gallery">
+                    ${e.images.map(i=>`<img src="${i}" alt="Date memory image">`).join("")}
+                    ${e.videos.map(i=>`<video controls><source src="${i}"></video>`).join("")}
+                </div>
+            `:""}
+        </div>
+    `}document.getElementById("sort-toggle").addEventListener("click",()=>{a=!a,document.getElementById("sort-toggle").classList.toggle("descending",!a),l()});console.log("Initializing date list...");l();
